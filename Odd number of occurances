@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a[100],n,i,count,temp=0,freq[100],j;
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+    scanf("%d",&a[i]);
+    freq[i]=-1;
+}
+for(i=0;i<n;i++)
+{
+    count=1;
+for(j=i+1;j<n;j++)
+{
+    if(a[i]==a[j])
+    {
+    count++;
+    freq[j]=0;
+    }
+}
+if(freq[i]!=0)
+freq[i]=count;
+}
+for(i=0;i<n;i++)
+{
+    if(freq[i]%2!=0)
+    {
+    printf("%d\t",a[i]);
+    temp++;
+    }
+}
+if(temp==0)
+printf("-1");
+}
+
