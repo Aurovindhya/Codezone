@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int index=0;
+char str[101],maxchar;
+int maxcount=0, alphacount[128]={0};
+scanf("%s",str);
+while(str[index]!='\0')
+{
+    alphacount[str[index]]++;
+    if(alphacount[str[index]]>=maxcount)
+    {
+        maxcount=alphacount[str[index]];
+        maxchar=str[index];
+    }
+    index++;
+}
+    printf("%c",maxchar);
+
+}
