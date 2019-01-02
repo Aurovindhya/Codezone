@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+char o;
+int a,c,temp,sum;
+scanf("%d",&sum);
+while(scanf("%c%d",&o,&a)==2)
+{
+   if(o=='+')
+   sum+=a;
+  else  if(o=='-')
+  sum-=a;
+  else if(o=='*')
+  sum*=a;
+  else if(o=='/')
+  sum/=a;
+}printf("%d",sum);
+}
+
