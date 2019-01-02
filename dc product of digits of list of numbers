@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,num;
+scanf("%d",&num);
+while(scanf("%d",&n)==1)
+{
+    int i=n;
+    int prod=1;
+  while(i>0)
+  {
+     prod*=i%10;
+     i/=10;
+  }printf("%d ",prod);
+}
+
+}
