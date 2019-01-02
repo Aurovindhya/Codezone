@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+int n,arr[100];
+scanf("%d",&n);
+for(int index=0;index<n;index++)
+{
+    scanf("%d",&arr[index]);
+}
+int combocount=(1<<n)-1;
+for(int ctr=1;ctr<=combocount;ctr++)
+{
+    int combo =ctr;
+    int index=0;
+    while(combo!=0)
+    {
+        int lastbit= combo&1;
+        if(lastbit==1){
+            printf("%d",arr[index]);
+        }
+        index++;
+        combo/=2;
+    }printf("\n");
+}
+
+}
+
