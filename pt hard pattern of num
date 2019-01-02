@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    for(int row=1;row<=num;row++){
+        int val;
+        for(int col=1;col<=row;col++)
+        {
+            if(col==1)
+            {
+                val=row;
+            }
+            else if(col%2==0)
+            {
+                val=val+(num-row)*2 + 1;
+            }
+            else 
+            {
+                val+=((row-1)-(col-1))*2 +2;
+            }
+    
+    printf("%d ",val);
+        
+    }
+    printf("\n");
+}
+}
+
