@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a,b;
+char o;
+scanf("%d%c%d",&a,&o,&b);
+switch(o)
+{
+    case 'A':
+    case 'a':
+    printf("%d",a+b);
+    break;
+    case 'S':
+    case 's':
+    printf("%d",a-b);
+    break;
+    case 'M':
+    case 'm':
+    printf("%d",a*b);
+    break;
+    case 'D':
+    case 'd':
+    printf("%d",a/b);
+    break;
+}
+
+}
