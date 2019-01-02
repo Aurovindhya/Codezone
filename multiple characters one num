@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int num;
+    char str[101];
+    while(scanf("%[^0-9]%d",str,&num)==2)
+    {
+        while(num--)
+        printf("%s", str);
+    }
+}
