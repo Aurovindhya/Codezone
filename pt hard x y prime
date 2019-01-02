@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int m,n;
+scanf("%d %d",&m, &n);
+int prime[n+1];
+for(int index=2;index<=n;index++){
+    prime[index]=1;
+}
+for(int ctr=2;ctr<=sqrt(n);ctr++)
+{
+    if(prime[ctr]==1)
+    {
+        for(int divider=ctr*ctr; divider<=n;divider+=ctr)
+        {
+            prime[divider]=0;
+        }
+    }
+}
+for(int ctr=m;ctr<=n;ctr++){
+    if(prime(ctr))
+    {
+        printf("%d",ctr);
+    }
+}
+
+
+}
