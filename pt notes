@@ -1,0 +1,2 @@
+tail call recursion:
+it consideres the call as loop and not recursion.
