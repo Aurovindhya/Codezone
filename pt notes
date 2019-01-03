@@ -1,2 +1,13 @@
 tail call recursion:
 it consideres the call as loop and not recursion.
+
+literals:
+printf("jbkjdbv");
+jbkjdbv is literal
+
+char s[]="hello"
+printf(s);
+s is string variable
+
+printf(&str1[matchindex]) is similar
+
