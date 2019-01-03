@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int printdouble(int n)
+{
+    if(n>0)
+    {
+    printdouble(n/10);
+    printf("%d",n%10*2);
+    }
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printdouble(n);
+}
+
