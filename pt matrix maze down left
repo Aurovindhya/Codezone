@@ -1,0 +1,42 @@
+#include<stdio.h> 
+#include <stdlib.h>
+#include<math.h>
+int main() 
+{
+int r,c,flag,i,j;    
+scanf("%d %d",&r,&c);
+char a[r][c]; 
+int reach[r][c]; 
+for(int i=0;i<r;i++)
+{
+char temp[2];
+for(j=0;j<c;j++)
+{
+scanf("%s",temp); 
+a[i][j]=temp[0];  
+reach[i][j]=0;
+}
+}
+reach[0][0]=a[0][0]== '*' ? 1 :0 ;
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(a[i][j]=='*')
+{
+if(j!=0)
+{
+reach[i][j]+=reach[i][j-1];   
+}
+if(i!=0)  
+{
+reach[i][j]+=reach[i-1][j];  
+}
+}
+printf("%d ",reach[i][j]); 
+}
+printf("\n");  
+}
+printf("%d",reach[r-1][c-1]);        
+
+}
