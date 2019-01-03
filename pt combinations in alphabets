@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+char getalphabet(char ch)
+{
+    return ch-'1'+1+'a'-1;
+    
+}
+void printcombo(char str[],int index,char result[],int resultindex)
+{
+    if(str[index]=='\0')
+    {
+        result[resultindex]='\0';
+        printf("%s ",result);
+        return;
+    }
+    result[resultindex]=getalphabet(str[index]);
+    printcombo(str,index+1,result,resultindex+1);
+    if(str[index+1]!='\0' && (str[index]=='1' || (str[index]=='2' && str[index+1] <='6')))
+    {
+        int ch = str[index]-'1'+1;
+        ch=ch*10+(str[index+1]-'1'+1);
+        result[resultindex]='a'+ch-1;
+        printcombo (str,index+2,result,resultindex+1);
+    }
+}
+int main()
+{
+    char str[101],result[101];
+    scanf("%s",str);
+    printcombo(str,0,result,0);
+    return 0;
+}
+
+
