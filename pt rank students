@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+struct Rank
+{
+    char name[101];
+    int score;
+};
+int main()
+{
+int i,j,n,x;
+scanf("%d %d",&n,&x);
+struct Rank student[n];
+for(i=0;i<n;i++)
+{
+scanf("%s %d",&student[i].name,&student[i].score);
+}
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+    if(student[i].score!=student[j].score)
+    {
+    if (student[i].score<student[j].score)
+    {
+        struct Rank temp=student[i];
+        student[i]=student[j];
+        student[j]=temp;
+    }
+    }
+    else if(strcmp(student[i].name,student[j].name)>0)
+    {
+        struct Rank temp=student[i];
+        student[i]=student[j];
+        student[j]=temp;
+    }
+}
+}
+int r=1;
+for(i=0;i<n;i++)
+{
+    if(i!=0 && student[i].score!=student[i-1].score)
+    {
+    r=i+1;
+    }
+    printf("%s %d\n",student[i].name,r);
+     if(r==x)
+        {
+            printf("%s\n",student[i].name);
+            for(int p=i+1;student[p].score==student[p-1].score;p++)
+            {
+                printf("%s\n",student[p].name);
+            }return 0;
+        }
+
+}printf("-1");
+
+}
