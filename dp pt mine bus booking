@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c,n,i,count0,need=0,req[100];
+scanf("%d %d %d",&r,&c,&n);
+int seat[r][c];
+for(i=0;i<r;i++)
+for(int j=0;j<c;j++)
+{
+    scanf("%d\t",&seat[i][j]);
+    if(seat[i][j]==0)
+    count0++;
+}
+for(i=0;i<n;i++)
+{
+    scanf("%d",&req[i]);
+}
+int max=count0;
+int tot=0;
+for(i=0;i<n;i++)
+{
+    tot+=req[i];
+    if(tot>max)
+    {
+    tot-=req[i];
+    need+=req[i];
+    }
+}
+printf("%d",need);
+}
