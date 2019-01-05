@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+void checkandprint(char left[], char mid[], char right[])
+{
+    int midlen=strlen(mid);
+    if(strlen(left)!=strlen(right)||left[0]!=mid[0]||right[0]!=mid[midlen-1])
+    return;
+    int index=0;
+    while(mid[index])
+    {
+        printf("%c ",mid[index++]);
+    }
+    printf("\n");
+    index=1;
+    while(left[index])
+    {
+        printf("%c ",left[index]);
+    for(int ctr=1;ctr<=midlen-2;ctr++)
+    {
+        printf("* ");
+    }printf("%c\n",right[index]);
+    index++;
+    }
+}
+int main()
+{
+char words[3][101];
+scanf("%s %s %s",words[0],words[1],words[2]);
+int left[]={0,2,1,2,0,1};
+int right[]={2,0,2,1,1,0};
+int mid[]={1,1,0,0,2,2};
+for(int index=0;index<6;index++)
+checkandprint(words[left[index]],words[mid[index]],words[right[index]]);
+
+}
