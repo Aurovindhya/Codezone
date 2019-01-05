@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char str[101];
+int n;
+scanf("%s %d",str,&n);
+int index=0;
+int asteriskcount=0;
+int diff=-1;
+while(str[index]){
+    for(int clr=1;clr<=asteriskcount;clr++)
+    {
+        printf("*");
+    }printf("%c\n",str[index]);
+    if(asteriskcount==0||asteriskcount==n-1)
+    {
+        diff=-diff;
+    }
+    asteriskcount+=diff;
+    index++;
+}
+return 0;
+}
