@@ -1,0 +1,19 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		long first=0;
+		long second=1;
+		System.out.print(first+"\t"+second+"\t");
+		for(int index=2;index<n;++index)
+		{
+		 long next=first+second;
+		 System.out.print(next+"\t");
+		 first=second;
+		 second=next;
+		}
+
+	}
+}
