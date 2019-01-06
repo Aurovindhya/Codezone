@@ -1,0 +1,27 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long n=sc.nextLong();
+		int count=0;
+		if(n==2)
+		System.out.print("YES");
+		else
+		{
+		    for(long index=2;index<=n;index++)
+		    {
+		        if(n%index==0)
+		        count++;
+		    }
+         if(count==1)
+         {
+             System.out.print("YES");
+         }
+         else
+         {
+             System.out.print("NO");
+         }
+		}    
+	}
+}
