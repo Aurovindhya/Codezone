@@ -1,0 +1,16 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        int hcf=1;
+        for(int index=1;index<=x&&index<=y;index++)
+        {
+            if(x%index==0&&y%index==0)
+            hcf=index;
+        }
+        System.out.println(hcf);
+	}
+}
