@@ -1,0 +1,31 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc =  new Scanner(System.in);
+		int index=0,largest;
+		int size=sc.nextInt();
+		int [] arr=new int[size];
+		while(index<size)
+		{
+		    arr[index]=sc.nextInt();
+		    index++;
+		}
+		largest=arr[0];
+		int secondlargest=arr[0];
+		index--;
+		while(index>0)
+		{
+		    if(arr[index]>largest)
+		    {
+		        secondlargest=largest;
+		        largest=arr[index];
+		    }
+		    else if(arr[index]>secondlargest)
+		    {
+		        secondlargest=arr[index];
+		    }index--;
+		}System.out.println(secondlargest);
+
+	}
+}
