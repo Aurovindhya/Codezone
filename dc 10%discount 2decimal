@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+float x,y,z;
+scanf("%f %f %f",&x,&y,&z);
+double price;
+if(x==y&&y!=z)
+price=z+2*(x-x/10);
+else if(y==z&&x!=y)
+price=x+2*(z-z/10);
+else if(x==z&&x!=y)
+price=y+2*(z-z/10);
+else
+price=x+y+z;
+printf("%.2f",price);
+
+}
