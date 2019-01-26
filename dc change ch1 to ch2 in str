@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char str[101],a,b;
+    int n;
+    scanf("%s%n\n%c %c",str,&n,&a,&b);
+    for(int i=0;i<n;i++)
+    {
+        if(str[i]==a)
+        printf("%c",b);
+        else
+        printf("%c",str[i]);
+    }
+}
