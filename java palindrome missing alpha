@@ -1,0 +1,24 @@
+import java.util.*;
+public class Hello {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String pal=sc.nextLine();
+	int n=pal.length();
+	int fc=0,rc=n-1;
+	while(fc!=rc)
+	{
+	    if(pal.charAt(fc)!=pal.charAt(rc))
+	    {
+	        if(pal.charAt(fc)==pal.charAt(rc-1)&&fc!=rc-1)
+	        {
+	            System.out.print(pal.charAt(rc));
+	        }
+	        else
+	        {
+	            System.out.print(pal.charAt(fc));
+	        }break;
+	    }fc++;
+	    rc--;
+	    
+	}}
+}
