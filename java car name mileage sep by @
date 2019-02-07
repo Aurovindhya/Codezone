@@ -1,0 +1,23 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String[] carinf=sc.nextLine().split("[ ]");
+	int i=0;
+	double lm=Integer.MAX_VALUE, cm;
+	String lmcar="";
+	while(i<carinf.length)
+	{
+	    String[] carnamem=carinf[i].split("[@]");
+	    cm=Double.parseDouble(carnamem[1]);
+	    if(cm<lm)
+{
+    lm=cm;
+    lmcar=carnamem[0];
+}i++;	    
+	}
+	
+System.out.println(lmcar);
+	}
+}
